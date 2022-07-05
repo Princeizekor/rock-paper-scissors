@@ -64,6 +64,9 @@ paper.addEventListener("click", () => {
     if (Win.innerHTML === "YOU WIN") {
         result += 1
         Num.innerHTML = result
+    } else if (Win.innerHTML === "YOU LOSE") {
+        result -= 1
+        Num.innerHTML = result
     }
 }, 3000);
 
@@ -97,6 +100,9 @@ scissor.addEventListener("click", () => {
     if (Win.innerHTML === "YOU WIN") {
         result += 1
         Num.innerHTML = result
+    } else if (Win.innerHTML === "YOU LOSE") {
+        result -= 1
+        Num.innerHTML = result
     }
 }, 3000);
 })
@@ -128,6 +134,9 @@ rock.addEventListener("click", () => {
 setTimeout(() => {
     if (Win.innerHTML === "YOU WIN") {
         result += 1
+        Num.innerHTML = result
+    } else if (Win.innerHTML === "YOU LOSE") {
+        result -= 1
         Num.innerHTML = result
     }
 }, 3000);
