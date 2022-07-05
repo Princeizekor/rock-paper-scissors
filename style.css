@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,600;1,700&family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+ :root {
+     --background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+     --head: hsl(217, 16%, 45%);
+     --white: whitesmoke;
+     --score: hsl(229, 64%, 46%);
+} 
+
+body {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    background: var(--background);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#main {
+    max-width: 1440px;
+}
+
+.head {
+    width: 800px;
+    height: 150px;
+    margin-top: 50px;
+    background: transparent;
+    padding: 25px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border: none;
+    justify-content: space-between;
+    outline: 3px solid var(--head);
+}
+
+.record {
+    width: 120px;
+    height: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--white);
+}
+
+.score {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--score);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.num {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.triangle {
+    margin-top: 100px;
+    position: relative;
+    width: 230px;
+    height: 220px;
+}
+
+.papper {
+    position: absolute;
+    margin-right: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    background: var(--white);
+    outline: 20px solid blue;
+}
+
+.scissors {
+    position: absolute;
+    margin-left: 220px;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    background: var(--white);
+    outline: 20px solid orange;
+}
+
+.rock {
+    position: absolute;
+    margin-top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    background: var(--white);
+    outline: 20px solid rgb(187, 49, 49);
+}
+
+.start {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.beats {
+    width: 50%;
+}
+
+.pappers {
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    background: var(--white);
+    outline: 25px solid blue;
+    display: none;
+}
+
+.pappers img {
+    width: 80px;
+    height: 80px;
+}
+
+.scissor {
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    background: var(--white);
+    outline: 25px solid orange;
+    display: none;
+}
+
+.scissor img {
+    width: 80px;
+    height: 80px;
+}
+
+.rocks {
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    background: var(--white);
+    outline: 25px solid rgb(187, 49, 49);
+    display: none;
+}
+
+.rocks img {
+    width: 80px;
+    height: 80px;
+}
+
+.pick {
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 170px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    color: var(--white);
+    position: absolute;
+    background: transparent;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.beat {
+    width: 50%;
+}
+
+.pap {
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    background: var(--white);
+    outline: 25px solid blue;
+    display: none;
+}
+
+.pap img {
+    width: 80px;
+    height: 80px;
+}
+
+.sci {
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    background: var(--white);
+    outline: 25px solid orange;
+    display: none;
+}
+
+.sci img {
+    width: 80px;
+    height: 80px;
+}
+
+.roc {
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    background: var(--white);
+    outline: 25px solid rgb(187, 49, 49);
+    display: none;
+}
+
+.roc img {
+    width: 80px;
+    height: 80px;
+}
+
+.picked {
+    margin-top: 50px;
+    margin-left: 80px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    color: var(--white);
+    position: absolute;
+    background: transparent;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.again {
+    position: absolute;
+    height: 400px;
+    margin-top: 500px;
+    margin-left: 315px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.you {
+    width: 130px;
+    font-size: 33px;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.try {
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: rgb(187, 49, 49);
+    background-color: var(--white);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.rules {
+    width: 100px;
+    height: 30px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    outline: 2px solid var(--head);
+}
+
+.window {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0%;
+    bottom: 0%;
+    background-color: rgb(0,0,0,0.5);
+    display: none;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    height: 370px;
+    width: 330px;
+    border-radius: 10px;
+    position: absolute;
+    padding: 20px;
+    top: 180px;
+}
+
+.disp {
+    display: flex;
+}
+
+.none {
+    display: none;
+}
+
+.modalimg {
+    margin-top: 50px;
+    width: 250px;
+    height: 230px;
+}
+
+.close {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.text {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(51, 50, 50);
+}
+
+@media screen and (max-width: 767px) {
+
+    body {
+        height: 800px;
+    }
+
+    #main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .head {
+        width: 300px;
+        height: 100px;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 0%;
+        display: flex;
+        position: absolute;
+        top: 80px;
+    }
+
+    .head img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .record {
+        width: 80px;
+        height: 80px;
+        padding: 5px;
+    }
+
+    .score {
+        font-size: 15px;
+    }
+
+    .num {
+        font-size: 45px;
+    }
+
+    .game {
+        width: 100%;
+        margin-top: 100px;
+    }
+    
+    .start {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 300px;
+        margin: 0%;
+    }
+
+    .triangle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .papper {
+        width: 100px;
+        height: 100px;
+        outline: 15px solid blue;
+    }
+    
+    .scissors {
+        width: 100px;
+        height: 100px;
+        outline: 15px solid orange;
+    }
+    
+    .rock {
+        width: 100px;
+        height: 100px;
+        outline: 15px solid rgb(187, 49, 49);
+    }
+
+    .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        height: 550px;
+        width: 100%;
+        border-radius: 10px;
+        position: absolute;
+        padding: 20px;
+        top: 0%;
+    }
+    
+    .pappers {
+        margin: 0%;
+        width: 100px;
+        height: 100px;
+        outline: 15px solid blue;
+    }
+    
+    .pappers img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .scissor {
+        margin: 0%;
+        width: 100px;
+        height: 100px;
+        outline: 15px solid orange;
+    }
+
+    .beat {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 100px;
+        right: 0%;
+    }
+
+    .beats {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 100px;
+        left: 0%;
+    }
+    
+    .scissor img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .rocks {
+        margin: 0%;
+        width: 100px;
+        height: 100px;
+        outline: 15px solid rgb(187, 49, 49);
+    }
+    
+    .rocks img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .pick {
+        margin: 0%;
+        top: 80px;
+    }
+
+    .pap {
+        margin: 0%;
+        width: 100px;
+        height: 100px;
+        outline: 15px solid blue;
+    }
+    
+    .pap img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .sci {
+        margin: 0%;
+        width: 100px;
+        height: 100px;
+        outline: 15px solid orange;
+    }
+    
+    .sci img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .roc {
+        margin: 0%;
+        width: 100px;
+        height: 100px;
+        outline: 15px solid rgb(187, 49, 49);
+    }
+    
+    .roc img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .picked {
+        margin: 0%;
+        top: 80px;
+    }
+    
+    .again {
+        margin: 0%;
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .you {
+        margin: 0%;
+        width: 130px;
+        font-size: 33px;
+        color: var(--white);
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+    
+    .try {
+        margin: 0%;
+        height: 40px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: rgb(187, 49, 49);
+        background-color: var(--white);
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+
+    
+    .window {
+        background-color: white;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .work {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        top: 750px;
+    }
+
+    .rules {
+        position: static;
+        margin: 0%;
+    }
+
+    .text {
+        position: absolute;
+    }
+
+    .close {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .off {
+        position: absolute;
+        bottom: 0%;
+    }
+
+}
